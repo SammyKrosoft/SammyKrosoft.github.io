@@ -1,0 +1,9 @@
+---
+layout: post
+title: How-to procedure – Exchange 2010 SP1+ – Enabling and Troubleshooting Calendar Repair Assistant
+date: 2013-07-13 18:32
+author: sammykrosoft
+comments: true
+categories: [Uncategorized]
+---
+<p>&#160;</p>  <p>Did you ever have users complaining that meetings didn’t show up for some attendees ? Or a boss scheduling a meeting, and the meeting disappears from his calendar ? </p>  <p>&#160;</p>  <div id="scid:8eb9d37f-1541-4f29-b6f4-1eea890d4876:4bb2fba8-53a7-4755-8128-a4c12d57305e" class="wlWriterEditableSmartContent" style="margin: 0px; padding: 0px; float: none; display: inline;"><p><div><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/73/61/metablogapi/6013.How-To%20procedure%20-%20Exchange%20Server%202010%20SP1%20-%20Operations%20-%20Enable%20Calendar%20Repair%20Assistant.pdf" original-url="http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-73-61-metablogapi/6013.How_2D00_To-procedure-_2D00_-Exchange-Server-2010-SP1-_2D00_-Operations-_2D00_-Enable-Calendar-Repair-Assistant.pdf" target="_self">How-To procedure - Exchange Server 2010 SP1 - Operations - Enable Calendar Repair Assistant.pdf</a></div></p></div>  <p>&#160;</p>  <p>Note: if the Calendar Repair Assistant has to do too many repairs, there might be an application that is constantly corrupting the calendar(s).</p>  <p>This can be:</p>  <p>- An Outlook add-on</p>  <p>- a misconfigured BlackBerry Server</p>  <p>- file level antivirus scanning the OST and/or the TMP files on the Outlook working directory (on the users’s profile Appdata/Roaming directory)</p>  <p>- too many delegates on a single calendar, thus creating conflicts and resulting on meetings not being updated or created</p>  <p>…</p>

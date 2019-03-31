@@ -1,0 +1,10 @@
+---
+layout: post
+title: Tip – outil pour lister une partie ou l’ensemble des compteurs de performance sur une machine
+date: 2009-09-16 11:38
+author: sammykrosoft
+comments: true
+categories: [Uncategorized]
+---
+<p><strong>TypePerf.exe</strong> : un outil int&eacute;gr&eacute; &agrave; Windows, permettant :<p>- de lister les compteurs sur une machine (<strong>TypePerf &ndash;qx</strong> ou bien <strong>TypePerf &ndash;q</strong> suivant que l&rsquo;on veut ou non le d&eacute;tail de toutes les instances de chaque compteur &ndash; exemple : pour Disque Logique, le d&eacute;tail des instances correspondra &agrave; Disque Logique (C:), Disque Logique (D:), et toutes les instances correspondra &agrave; Disque Logique (*) dans l&rsquo;OutPut de la commande)</p><p>- de d&eacute;marrer une collecte de performances (ind&eacute;pendamment de l&rsquo;outil Perfmon.exe / perfmon.msc) avec le choix d&rsquo;enregistrer les donn&eacute;es directement &agrave; l&rsquo;&eacute;cran (pas tr&egrave;s pratique), ou dans un fichier CSV ou BLG (<strong>typeperf -cf CompteursMemory.txt -o MemoryCheckPerf.csv</strong> o&ugrave; <em>CompteursMemory.txt</em> est un fichier texte contenant la liste des compteurs de l&rsquo;objet M&eacute;moire et <em>MemoryCheckPerf.csv</em> est le fichier de sortie de la commande)</p><p>- de collecter les performances d&rsquo;une machine distante soit avec l&rsquo;option <strong>&ndash;s</strong>, soit en pr&eacute;cisant le nom de la machine dans le(s) compteur(s) qu&rsquo;on lui indique de surveiller</p><p>- enfin, soit on lui indique directement les compteurs &agrave; surveiller, soit on lui donne un fichier dans lequel on aura list&eacute; les compteurs &agrave; surveiller, que l&rsquo;on pourra copier/coller de l&rsquo;Output <strong>TypePerf &ndash;qx / TypePerf &ndash;q</strong></p><p><strong><em>Note</em></strong> : les compteurs sont de la forme :</p><p>Objet(instance)compteur</p><p>ou</p><p><a href="file://%5C%5CServeur%5CObjet(instance)%5Ccompteur">\ServeurObjet(instance)compteur</a></p><p>exemple : <strong>Network Interface(*)Bytes Sent/sec</strong></p><p>&nbsp;</p><p>Pratique !</p><p>Sam.</p></p>
+

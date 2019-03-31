@@ -1,0 +1,9 @@
+---
+layout: post
+title: Spam Confidence Levels / Seuils de probabilité de courrier indésirable
+date: 2014-01-31 09:41
+author: sammykrosoft
+comments: true
+categories: [Uncategorized]
+---
+<p></p>  <p><a href="http://technet.microsoft.com/en-us/library/jj200686(v=exchg.150).aspx">http://technet.microsoft.com/en-us/library/jj200686(v=exchg.150).aspx</a></p>  <p></p>  <p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/73/61/metablogapi/0842.image_2.png" original-url="http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-73-61-metablogapi/0842.image_5F00_2.png"><img title="image" style="display:inline;" border="0" alt="image" src="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/73/61/metablogapi/6560.image_thumb.png" original-url="http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-73-61-metablogapi/6560.image_5F00_thumb.png" width="573" height="118" /></a> </p>  <p></p>  <p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/73/61/metablogapi/image_4.png" original-url="http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-73-61-metablogapi/image_5F00_4.png"><img title="image" style="display:inline;" border="0" alt="image" src="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/73/61/metablogapi/image_thumb_1.png" original-url="http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-73-61-metablogapi/image_5F00_thumb_5F00_1.png" width="572" height="120" /></a></p>
