@@ -4,7 +4,7 @@ title: How To–Load Exchange Management Shell into PowerShell ISE
 date: 2017-12-17 11:32
 author: sammykrosoft
 comments: true
-categories: [Uncategorized]
+categories: [Exchange, Powershell, ISE]
 ---
 <span style="font-size: 16pt">1. Introduction
 </span>
