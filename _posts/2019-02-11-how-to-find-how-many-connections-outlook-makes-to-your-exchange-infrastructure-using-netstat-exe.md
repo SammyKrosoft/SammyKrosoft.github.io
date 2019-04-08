@@ -4,7 +4,8 @@ title: How-To – Find how many connections Outlook makes to your Exchange infra
 date: 2019-02-11 13:05
 author: sammykrosoft
 comments: true
-categories: [Uncategorized]
+categories: [Outlook, Network]
+permalink: /How-To/Find-number-of-outlook-connections.html
 ---
 In this quick procedure we leverage <strong>TaskList.exe</strong> command (default Windows command line utility) to get a specific process name and ID, and the <strong>Netstat.exe</strong> command (also a default Windows command line utility) to quickly find the opened connections from a specific application.
 
