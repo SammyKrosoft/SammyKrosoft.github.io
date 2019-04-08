@@ -5,6 +5,7 @@ date: 2018-11-19 00:05
 author: sammykrosoft
 comments: true
 categories: [Uncategorized]
+permalink: /Exchange-PowerShell-WPF/Exchange-Sample-Mailbox-GUI.html
 ---
 Here is a GUI to get mailboxes information in an Exchange 2010, 2013, 2016, 2019 and/or Exchange Online (O365) environments.
 I initially created this GUI just to illustrate how we can use Windows Presentation Foundation (WPF) forms to ease up the execution of PowerShell commands.

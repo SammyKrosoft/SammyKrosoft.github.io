@@ -5,6 +5,7 @@ date: 2018-06-08 19:59
 author: sammykrosoft
 comments: true
 categories: [Uncategorized]
+permalink: /Exchange-Excel-PowerShell/Dynamic-Distribution-Group-PowerShell-Generator.html
 ---
 <h1>I. Introduction</h1>
 See the <a href="#Download">Download section below for the link to download the tool.</a>

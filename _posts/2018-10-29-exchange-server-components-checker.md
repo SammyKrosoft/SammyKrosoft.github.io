@@ -5,6 +5,7 @@ date: 2018-10-29 22:15
 author: sammykrosoft
 comments: true
 categories: [Exchange, Exchange 2013, exchange 2016, Managed Availability, Server Components, Uncategorized]
+permalink: /Exchange-PowerShell-WPF/Exchange-Server-Components-Checker.html
 ---
 Here’s the latest addition in Exchange 2013/2016/2019 server quick tools. Sometimes, for maintenance or issues detected by Exchange Managed Availability, some components like Client Access, Autodiscover, Mail flow, etc... can be down on Exchange servers, which "exclude" these servers from the pool of Exchange servers. Here's a tool that helps you to check the state of every Exchange Server’s components and optionally start these if they are inactive (<a href="#download"><strong>tool download link at the end of this article</strong></a>)
 
