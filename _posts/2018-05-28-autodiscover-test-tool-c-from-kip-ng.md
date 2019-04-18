@@ -5,6 +5,7 @@ date: 2018-05-28 11:58
 author: sammykrosoft
 comments: true
 categories: [Uncategorized]
+permalink: /Exchange-Tool/Autodiscover-Test-Tool.html
 ---
 Hi all,
 

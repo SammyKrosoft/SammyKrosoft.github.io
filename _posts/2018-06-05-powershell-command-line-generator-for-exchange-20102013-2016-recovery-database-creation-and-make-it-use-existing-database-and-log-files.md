@@ -5,6 +5,7 @@ date: 2018-06-05 10:11
 author: sammykrosoft
 comments: true
 categories: [Uncategorized]
+permalink: /Exchange-PowerShell-Excel/Exchange-PowerShell-Recovery-Database-Commands.html
 ---
 <h1><span>Description</span></h1>
 Download link <a href="#download"> at the very end of this article</a>...

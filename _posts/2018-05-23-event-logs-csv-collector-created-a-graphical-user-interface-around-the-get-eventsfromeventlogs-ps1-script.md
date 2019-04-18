@@ -5,6 +5,7 @@ date: 2018-05-23 11:26
 author: sammykrosoft
 comments: true
 categories: [Uncategorized]
+permalink: /Exchange-PowerShell-WPF/Exchange-Event-Log-Collector-GUI.html
 ---
 *** Edited - added a function to check for Powershell V3 (<em>Function IsPSV3 () - required</em>) and exit if not ***
 
