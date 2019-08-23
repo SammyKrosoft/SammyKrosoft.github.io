@@ -1,4 +1,4 @@
-```
+```powershell
 Move-ActiveMailboxDatabase Database_Name\Server_Name -SkipClientExperienceChecks -MountDialOverRide GoodAvailability 
 ```
 And checked database status
