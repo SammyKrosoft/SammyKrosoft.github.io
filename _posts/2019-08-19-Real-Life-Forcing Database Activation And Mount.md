@@ -1,4 +1,4 @@
-# NOTE from the field:
+# a NOTE from the field:
 
 ## Activating an Exchange mailbox database on another Datacenter 
 We had an issue today where the databases from the Disaster Recovery (DR) datacenter would not activate because the "Active MAnager" tried to join the server in the failed datacenter and couldn't.
@@ -8,14 +8,18 @@ The trick was to use the `Move-ActiveMailboxDatabase` with the `-SkipClientExper
 - Here's the full command line we used to activate the database `Database_Name` on server `Server_Name` :
 
 ```powershell
+
 Move-ActiveMailboxDatabase Database_Name\Server_Name -SkipClientExperienceChecks -MountDialOverRide GoodAvailability 
+
 ```
 
 ## Checking the database status
 We then ran the following command line to check that the database is indeed mounted on the server we want:
 
 ```Powershell
+
 Get-MailboxDatabase -Status | Ft Name,MountedOnServer, Mounted
+
 ```
 
 Here we should see under the MountedOnServer one of the servers from the DR datacenter, and under the Mounted status the “$True” value.
