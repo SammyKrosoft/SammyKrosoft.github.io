@@ -16,4 +16,4 @@ We then ran the following command line to check that the database is indeed moun
 
 ```Powershell Get-MailboxDatabase -Status | Ft Name,MountedOnServer, Mounted ```
 
-Here we should see the MountedOnServer one of the servers from the DR datacenter, and Mounted status to “$True”.
+Here we should see under the MountedOnServer one of the servers from the DR datacenter, and under the Mounted status the “$True” value.
