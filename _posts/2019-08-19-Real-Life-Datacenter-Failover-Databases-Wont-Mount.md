@@ -1,4 +1,4 @@
-# A NOTE from the field:
+# a note from the field...
 
 ## Activating an Exchange mailbox database on another Datacenter 
 We had an issue today where the databases from the Disaster Recovery (DR) datacenter would not activate because the "Active MAnager" tried to join the server in the failed datacenter and couldn't.
