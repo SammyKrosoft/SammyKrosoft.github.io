@@ -66,3 +66,12 @@ Sunday, August 25, 2019 2:59:01 AM
 I knew at that time that at 2:59:01 AM GMT time, the Exchange setup was stuck since 02:46:34, that's sroughly 13 minutes stuck after updating the performance counters strings...
 
 That doesn't tell me much, but at least I knew it didn't stall on an error for now...
+
+## If Exchange Setup is taking too long on Windows 2016, exclude the following directories from Windows Defender
+
+Exchange binaries directory
+Exchange Setup Log directory
+Exchange Program Files directory
+
+<Insert image from Media>
+assets\media\Win_Defender_Exclusions_exchange_Setup.png
