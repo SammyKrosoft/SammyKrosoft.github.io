@@ -73,7 +73,7 @@ Exchange binaries directory
 Exchange Setup Log directory
 Exchange Program Files directory
 
-![Win Defender Exclusions](../assets/media/Win_Defender_Exclusions_exchange_Setup.png)
+![Win Defender Exclusions](..\assets\media\Win_Defender_Exclusions_exchange_Setup.png)
 
 ## If you have to re-run setup because of a failed setup, check the following registry keys
 If the setup fails - in my case it Dr Watsoned once on the Mailbox role install the first time it failed, and then I got successful install, but then the Get-ClientAccessService was not returning the server name => I checked the registry keys for the presence of *ACTION* and *WATERMARK* under each component.
@@ -85,4 +85,4 @@ https://practical365.com/exchange-server/exchange-server-error-an-incomplete-ins
 
 And a screenshot of a sample component where removing *ACTION* and *WATERMARK* enabled a successful Setup.exe second run:
 
-![Win Defender Exclusions](../assets/media/exchange-registry-watermark-02.png)
+![Registry Action and Watermark Keys](..\assets\media\exchange-registry-watermark-02.png)
