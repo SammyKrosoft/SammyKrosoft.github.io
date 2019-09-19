@@ -20,7 +20,7 @@ Or to dump the same information in a CSV file, the same hashatable expression @{
 Get-Mailbox User001 | Ft Name,DisplayName,@{Name="E-mail addresses";Expression={$_.proxyaddresses -join ";"}} | Export-CSV -NoTypeInformation c:\temp\MyMailboxAddresses.csv
 ```
 
-# Example with exporting DAG information with many parameters
+## Example with exporting DAG information with many parameters
 
 That includes some single-valued properties as well as multi-valued properties:
 
