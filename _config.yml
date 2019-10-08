@@ -52,4 +52,3 @@ paginate_path: "/page:num/"
 # Disqus Comments
 disqus:
     shortname: sammicrosoft
-
