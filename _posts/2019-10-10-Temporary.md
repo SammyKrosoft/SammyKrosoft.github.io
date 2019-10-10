@@ -1,4 +1,5 @@
 # For Lab Testing Only
 
-[1]:blog.canadasam.ca/assets/files/OfflineClientInstall.msi
+<a href="blog.canadasam.ca/assets/files/OfflineClientInstall.msi" title="File Name">File name</a>
+
 
