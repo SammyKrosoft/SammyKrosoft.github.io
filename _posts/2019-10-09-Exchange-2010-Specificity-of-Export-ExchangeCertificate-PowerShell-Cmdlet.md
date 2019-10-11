@@ -5,32 +5,57 @@
 ISSUE: there is no ```-Path``` or ```-FileName``` parameter with the ```Export-ExchangeCertificate``` Exchange cmdlet.
 
 
-
-
-
-Use the following synthax:
+Just storing my lab's blurb below, I'll format it better later on...
 
 ```PowerShell
-$file = Export-ExchangeCertificate -Thumbprint E8D129180C1334D50DBE17A26795BEE0A0AEA9B3 -BinaryEncoded:$true -Password (Get-Credential).password
-```
+# Storing the New-ExchangeCertificate parameters value as well as the path we want the file request stored in
+# into variables - we'll do the same for the Thumbprint -> that way we just have to update the values at one spot
+# for multiple commands instead of having to update the values for each command lines...
 
-For Example with e-mail addresses from an Exchange mailbox user:
+$CertRequestPath = ".\request3.txt"
+$SubjectName = "c=CA, s=ONTARIO, l=OTTAWA, o=PCO, ou=PCO, cn=mail.pco-bcp.gc.ca"
+$DomainNames = "mail.pco-bcp.gc.ca", "autodiscover.pco-bcp.gc.ca"
 
-```PowerShell
-Get-Mailbox User001 | Ft Name,DisplayName,@{Name="E-mail addresses";Expression={$_.proxyaddresses -join ";"}}
-```
+# As we don't have a -FileName or a -Parameter attribute
+Set-Content -path $CertRequestPath -Value (New-ExchangeCertificate -GenerateRequest -KeySize 2048 -SubjectName $SubjectName -DomainName $DomainNames -PrivateKeyExportable $True)
 
-Or to dump the same information in a CSV file, the same hashatable expression @{Name="Name";Expression={$_.MultivaluedProperty -join ";"}} can be used in a Select or Select-Object statement:
+notepad $CertRequestPath
 
-```PowerShell
-Get-Mailbox User001 | Ft Name,DisplayName,@{Name="E-mail addresses";Expression={$_.proxyaddresses -join ";"}} | Export-CSV -NoTypeInformation c:\temp\MyMailboxAddresses.csv
-```
 
-## Example with exporting DAG information with many parameters
+get-exchangecertificate
 
-That includes some single-valued properties as well as multi-valued properties:
+explorer .
 
-```PowerShell
-Get-DatabaseAvailabilityGroup -Status *DAG0* | select Name, @{Name="Servers"; Expression={$_.Servers -join ";"}}, WitnessServer, WitnessDirectory, AlternateWitnessServer, AlternateWitnessDirectory, NetworkCompression, NetworkEncryption, ManualDagNetworkConfiguration, DatacenterActivationMode, @{Name="StoppedMailboxServers";Expression={$_.StoppedMailboxServers -join ";"}}, @{Name="StartedMailboxServers";Expression={$_.StartedMailboxServers -join ";"}}, @{Name="DatabaseAvailabilityGroupIpv4Addresses";Expression={$_.DatabaseAvailabilityGroupIpv4Addresses -join ";"}}, @{Name="DatabaseAvailabilityGroupIpAddresses";Expression={$_.DatabaseAvailabilityGroupIpAddresses -join ";"}}, AllowCrossSiteRpcClientAccess, ActivityState, FileSystem, @{NAme="OperationalServers";Expression={$_.DatabaseAvailabilityGroupIpAddresses -join ";"}}, PrimaryActiveManager, ServersInMaintenance, ThirdPartyReplication, ReplicationPort, @{Name="NetworkNames";Expression={$_.NetworkNames -join ";"}}, WitnessShareInUse, DatabaseAvailabilityGroupConfiguration, AutoDagSchemaVersion, AutoDagDatabaseCopiesPerDatabase, AutoDagDatabaseCopiesPerVolume, AutoDagTotalNumberOfDatabases, AutoDagTotalNumberOfServers, AutoDagDatabasesRootFolderPath, AutoDagVolumesRootFolderPath, AutoDagAllServersInstalled, AutoDagAutoReseedEnabled, AutoDagDiskReclaimerEnabled, AutoDagBitlockerEnabled, AutoDagFIPSCompliant, AutoDagAutoRedistributeEnabled, AutoDagSIPEnabled, ReplayLagManagerEnabled, MailboxLoadBalanceSellableStorage, MailboxLoadBalanceRelativeLoadCapacity, MailboxLoadBalanceComputeCapacity, MailboxLoadBalanceOverloadedThreshold, MailboxLoadBalanceUnderloadedThreshold, MailboxLoadBalanceEnabled, SiloName, DistributedStoreConfig, RequestedDistributedStoreConfig, DxStoreWitnessServers, DistributedStoreMembershipConfig, DistributedStoreMembershipConfigOverride, DxStoreSpareServers, PreferenceMoveFrequency, MetaCacheDatabaseVolumesPerServer, AdminDisplayName, ExchangeVersion, DistinguishedName, Identity, Guid, ObjectCategory, ObjectClass, WhenChanged, WhenCreated, WhenChangedUTC, WhenCreatedUTC, OrganizationId, Id, OriginatingServer, IsValid, ObjectState | export-csv -NoTypeInformation C:\temp\E2016DAGinfoStatus.csv
+
+$CertPath = "C:\scripts\cert4.cer"
+
+
+Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path $CertPath -Encoding byte -ReadCount 0))
+
+
+cls
+
+write-host "Before:"
+Get-ExchangeCertificate -Server O-EX-MAIL-01
+
+write-host "Assigning services..." -BackgroundColor Red -ForegroundColor Blue
+
+$Thumbprint = "3E840940A0413E75DBAA1A14FE495086B97C2642"
+
+Enable-ExchangeCertificate -Thumbprint $Thumbprint -Services POP,IMAP,SMTP,IIS
+
+write-host "After:"
+Get-ExchangeCertificate -Server O-EX-MAIL-01
+
+
+$ExportCert = ".\ExportedCert.pfx"
+#Exchange 2013/2016:
+#Export-ExchangeCertificate -Thumbprint $Thumbprint -FileName $ExportCert -BinaryEncoded -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force) -Server O-EX-MAIL-01
+
+#Exchange 2010 - there is no -FileName or -Path parameter for the older Export-ExchangeCertificate, despite what the documentation
+# is showing... instead, store the Export-ExchangeCertificate result in a variable, and write it in a file
+# using Set-Content, and -Encoding Byte parameter.
+$file = Export-ExchangeCertificate -Thumbprint $Thumbprint -BinaryEncoded:$true -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force)
+Set-Content -Path $ExportCer -Value $file.FileData -Encoding Byte
 
 ```
