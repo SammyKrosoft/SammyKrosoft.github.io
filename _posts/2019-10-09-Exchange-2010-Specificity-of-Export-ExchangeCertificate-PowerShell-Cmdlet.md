@@ -33,21 +33,29 @@ $CertPath = "C:\scripts\cert4.cer"
 Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path $CertPath -Encoding byte -ReadCount 0))
 
 
-cls
-
+#Showing the Exchange Certificates before enabling the 
+# Services on the new cert:
 write-host "Before:"
 Get-ExchangeCertificate -Server O-EX-MAIL-01
 
 write-host "Assigning services..." -BackgroundColor Red -ForegroundColor Blue
 
+#NOTE: change the thumbprint to your cert's thumbprint
+# that you identified on the previous Get-ExchangeCertificate
+# above
 $Thumbprint = "3E840940A0413E75DBAA1A14FE495086B97C2642"
 
+#We enable the IIS services (for OA, OAB, EWS, MAPI/HTTP, ...) on the new certificate
+# identified by its thumbprint that we stored on a variable just above
 Enable-ExchangeCertificate -Thumbprint $Thumbprint -Services POP,IMAP,SMTP,IIS
 
+# and we dump the new view of Exchange certs after enabling
+# services on the new certificate (note that you'll have IMAP, POP and SMTP on all your certs...)
 write-host "After:"
 Get-ExchangeCertificate -Server O-EX-MAIL-01
 
 
+# Setting the file path and name in a variable for easier manipulation:
 $ExportCert = ".\ExportedCert.pfx"
 #Exchange 2013/2016:
 #Export-ExchangeCertificate -Thumbprint $Thumbprint -FileName $ExportCert -BinaryEncoded -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force) -Server O-EX-MAIL-01
@@ -56,6 +64,10 @@ $ExportCert = ".\ExportedCert.pfx"
 # is showing... instead, store the Export-ExchangeCertificate result in a variable, and write it in a file
 # using Set-Content, and -Encoding Byte parameter.
 $file = Export-ExchangeCertificate -Thumbprint $Thumbprint -BinaryEncoded:$true -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force)
-Set-Content -Path $ExportCer -Value $file.FileData -Encoding Byte
+Set-Content -Path $ExportCert -Value $file.FileData -Encoding Byte
+
+#Optional: open an Explorer window in the current directory
+# To check that the cert has been exported:
+explorer .
 
 ```
