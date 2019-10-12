@@ -69,5 +69,12 @@ Set-Content -Path $ExportCert -Value $file.FileData -Encoding Byte
 #Optional: open an Explorer window in the current directory
 # To check that the cert has been exported:
 explorer .
+```
 
+Then to import the certificate on another machine:
+
+```PowerShell
+$ExportedCertPath = "c:\scripts\$ExportCertTo" 
+
+Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path $ExportedCertPath -Encoding byte -ReadCount 0)) -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force)
 ```
