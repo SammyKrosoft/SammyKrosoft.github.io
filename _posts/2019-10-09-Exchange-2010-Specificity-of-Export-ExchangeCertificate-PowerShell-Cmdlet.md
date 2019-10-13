@@ -19,17 +19,25 @@ $DomainNames = "mail.pco-bcp.gc.ca", "autodiscover.pco-bcp.gc.ca"
 # As we don't have a -FileName or a -Parameter attribute
 Set-Content -path $CertRequestPath -Value (New-ExchangeCertificate -GenerateRequest -KeySize 2048 -SubjectName $SubjectName -DomainName $DomainNames -PrivateKeyExportable $True)
 
+# Just by curiosity if we want to see the actual certificate
+#request blurb (usually BASE64 encoded), or if we want to copy/paste
+#the cert request blurb directly after having it generated,
+#we just open the file with norepad directly from PowerShell:
 notepad $CertRequestPath
 
-
+# Then double-checking the Exchange certificates, including
+#the request we just did:
 get-exchangecertificate
 
+# Just opening an Explorer window to view the current directory we're working from:
 explorer .
 
-
+# Storing the certificate path (the one received from the request we made earlier) in a variable
 $CertPath = "C:\scripts\cert4.cer"
 
-
+# Importing the certificate
+# IMPORTANT NOTE: The cert has to be imported on the same machine
+# where we made the request:
 Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path $CertPath -Encoding byte -ReadCount 0))
 
 
@@ -55,8 +63,9 @@ write-host "After:"
 Get-ExchangeCertificate -Server O-EX-MAIL-01
 
 
-# Setting the file path and name in a variable for easier manipulation:
-$ExportCert = ".\ExportedCert.pfx"
+# Setting the file path and name where to export the certificate to
+#in a variable for easier manipulation:
+$ExportCertTo = ".\ExportedCert.pfx"
 #Exchange 2013/2016:
 #Export-ExchangeCertificate -Thumbprint $Thumbprint -FileName $ExportCert -BinaryEncoded -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force) -Server O-EX-MAIL-01
 
@@ -64,14 +73,15 @@ $ExportCert = ".\ExportedCert.pfx"
 # is showing... instead, store the Export-ExchangeCertificate result in a variable, and write it in a file
 # using Set-Content, and -Encoding Byte parameter.
 $file = Export-ExchangeCertificate -Thumbprint $Thumbprint -BinaryEncoded:$true -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force)
-Set-Content -Path $ExportCert -Value $file.FileData -Encoding Byte
+Set-Content -Path $ExportCertTo -Value $file.FileData -Encoding Byte
 
 #Optional: open an Explorer window in the current directory
 # To check that the cert has been exported:
 explorer .
 ```
 
-Then to import the certificate on another machine:
+## Then to import the certificate on ANOTHER machine:
+
 
 ```PowerShell
 $ExportedCertPath = "c:\scripts\$ExportCertTo" 
