@@ -1,7 +1,6 @@
-# Another note from my lab...
+# Create E2010 certificate, Import, Assign, Export, Import on another machine
 
-## Exporting an Exchange 2010 certificate with Export-ExchangeCertificate
-
+## Creating the request
 ISSUE: there is no ```-Path``` or ```-FileName``` parameter with the ```Export-ExchangeCertificate``` Exchange cmdlet.
 
 
@@ -31,7 +30,10 @@ get-exchangecertificate
 
 # Just opening an Explorer window to view the current directory we're working from:
 explorer .
+```
+## Import (or Install) the new certificate on the Same machine
 
+```PowerShell
 # Storing the certificate path (the one received from the request we made earlier) in a variable
 $CertPath = "C:\scripts\cert4.cer"
 
@@ -61,8 +63,11 @@ Enable-ExchangeCertificate -Thumbprint $Thumbprint -Services POP,IMAP,SMTP,IIS
 # services on the new certificate (note that you'll have IMAP, POP and SMTP on all your certs...)
 write-host "After:"
 Get-ExchangeCertificate -Server O-EX-MAIL-01
+```
 
+## Export the certificate with the Private Key
 
+```PowerShell
 # Setting the file path and name where to export the certificate to
 #in a variable for easier manipulation:
 $ExportCertTo = ".\ExportedCert.pfx"
