@@ -6,7 +6,7 @@ ISSUE: there is no ```-Path``` or ```-FileName``` parameter with the ```Export-E
 
 Just storing my lab's blurb below, I'll format it better later on...
 
-```PowerShell
+```powershell
 # Storing the New-ExchangeCertificate parameters value as well as the path we want the file request stored in
 # into variables - we'll do the same for the Thumbprint -> that way we just have to update the values at one spot
 # for multiple commands instead of having to update the values for each command lines...
@@ -33,7 +33,7 @@ explorer .
 ```
 ## Import (or Install) the new certificate on the Same machine
 
-```PowerShell
+```powershell
 # Storing the certificate path (the one received from the request we made earlier) in a variable
 $CertPath = "C:\scripts\cert4.cer"
 
@@ -67,7 +67,7 @@ Get-ExchangeCertificate -Server O-EX-MAIL-01
 
 ## Export the certificate with the Private Key
 
-```PowerShell
+```powershell
 # Setting the file path and name where to export the certificate to
 #in a variable for easier manipulation:
 $ExportCertTo = ".\ExportedCert.pfx"
@@ -88,7 +88,7 @@ explorer .
 ## Then to import the certificate on ANOTHER machine:
 
 
-```PowerShell
+```powershell
 $ExportedCertPath = "c:\scripts\$ExportCertTo" 
 
 Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path $ExportedCertPath -Encoding byte -ReadCount 0)) -Password (ConvertTo-SecureString -String 'password' -AsPlainText -Force)
