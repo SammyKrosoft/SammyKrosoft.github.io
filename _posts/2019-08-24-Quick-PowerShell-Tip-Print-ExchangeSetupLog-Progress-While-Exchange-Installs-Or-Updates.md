@@ -3,7 +3,7 @@ layout: post
 author: sammykrosoft
 comments: true
 categories: [PowerShell,File]
-permalink: /How-To/Get-File-Status-Realtime.html
+permalink: /Quick-PowerShell-Tip-Print-ExchangeSetupLog-Progress-While-Exchange-Installs-Or-Updates.html
 ---
 
 # a note from my lab...

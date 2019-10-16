@@ -3,7 +3,7 @@ layout: post
 author: sammykrosoft
 comments: true
 categories: [PowerShell,DAG,Multivalue]
-permalink: /How-To/Export-Exchange-Information-With-MultiValue-parameters.html
+permalink: /Export-Exchange-DAG-Status-Info-with-Multivalued-Properties copy.html
 ---
 
 # Another note from my lab...

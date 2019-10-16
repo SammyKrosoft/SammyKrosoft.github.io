@@ -3,7 +3,7 @@ layout: post
 author: sammykrosoft
 comments: true
 categories: [Exchange,Databases]
-permalink: /How-To/Check-Mailbox-Database-Status.html
+permalink: /Real-Life-Datacenter-Failover-Databases-Wont-Mount.html
 ---
 
 # a note from the field...
