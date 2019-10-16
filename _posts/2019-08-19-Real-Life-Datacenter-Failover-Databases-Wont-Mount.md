@@ -16,7 +16,7 @@ Move-ActiveMailboxDatabase Database_Name\Server_Name -SkipClientExperienceChecks
 ## Checking the database status
 We then ran the following command line to check that the database is indeed mounted on the server we want:
 
-```Powershell
+```powershell
 
 Get-MailboxDatabase -Status | Ft Name,MountedOnServer, Mounted
 

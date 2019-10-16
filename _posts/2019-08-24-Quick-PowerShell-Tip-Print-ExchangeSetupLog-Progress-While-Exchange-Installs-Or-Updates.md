@@ -39,7 +39,7 @@ Here I've been waiting for a while, but I knew that the Exchange setup is loggin
 I then decided to loop the reading of the few last lines of the file. We can choose do read the "Tail" of a text file using ```Get-Content``` with the ```-Tail <Last_Number_of_Lines>``` parameter.
 
 Here's the bit of code that enables this:
-```PowerShell
+```powershell
 PS> while ($true){
     cls
     (Get-Date).addhours(4);Get-Content -tail 3 C:\ExchangeSetupLogs
@@ -48,7 +48,7 @@ PS> while ($true){
 ```
 
 Note the following:
-```PowerShell
+```powershell
 (Get-Date).AddHours(4)
 ```
 
