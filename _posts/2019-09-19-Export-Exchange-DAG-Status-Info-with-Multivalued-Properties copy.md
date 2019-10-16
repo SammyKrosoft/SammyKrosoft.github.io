@@ -1,3 +1,11 @@
+---
+layout: post
+author: sammykrosoft
+comments: true
+categories: [PowerShell,DAG,Multivalue]
+permalink: /How-To/Export-Exchange-Information-With-MultiValue-parameters.html
+---
+
 # Another note from my lab...
 
 ## Exporting PowerShellObject multivalued properties

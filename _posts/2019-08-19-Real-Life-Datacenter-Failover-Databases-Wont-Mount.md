@@ -1,3 +1,11 @@
+---
+layout: post
+author: sammykrosoft
+comments: true
+categories: [Exchange,Databases]
+permalink: /How-To/Check-Mailbox-Database-Status.html
+---
+
 # a note from the field...
 
 ## Activating an Exchange mailbox database on another Datacenter 

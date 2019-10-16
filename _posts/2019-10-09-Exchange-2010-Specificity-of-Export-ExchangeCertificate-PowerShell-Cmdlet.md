@@ -1,3 +1,11 @@
+---
+layout: post
+author: sammykrosoft
+comments: true
+categories: [PowerShell,Exchange 2010, Certificate]
+permalink: /How-To/Create-Exchange-2010-Certificate-Request-Import-Export.html
+---
+
 # Create E2010 certificate, Import, Assign, Export, Import on another machine
 
 ## Creating the request

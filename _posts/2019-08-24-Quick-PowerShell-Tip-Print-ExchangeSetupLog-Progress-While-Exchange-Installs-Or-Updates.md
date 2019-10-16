@@ -1,3 +1,11 @@
+---
+layout: post
+author: sammykrosoft
+comments: true
+categories: [PowerShell,File]
+permalink: /How-To/Get-File-Status-Realtime.html
+---
+
 # a note from my lab...
 
 ## Looping Get-Content -Tail <number> Of A File
