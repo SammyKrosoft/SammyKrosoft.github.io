@@ -17,7 +17,9 @@
 
     <script id="dsq-count-scr" src="//sammykrosoft.disqus.com/count.js" async></script>
     
+    {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
+    {% endif %}
   </body>
 
 </html>
