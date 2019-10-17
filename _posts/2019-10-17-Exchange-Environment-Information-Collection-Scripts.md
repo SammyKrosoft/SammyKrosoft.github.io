@@ -8,16 +8,19 @@ permalink: /Exchange-Environment-Information-Collection-Scripts.html
 
 # Exchange environment report script
 
-https://gallery.technet.microsoft.com/exchange/Generate-Exchange-2388e7c9
+[Exchange environmane report script](https://gallery.technet.microsoft.com/exchange/Generate-Exchange-2388e7c9)
 
-Tun the following:
+Run the following:
+```powershell
 .\Get-ExchangeEnvironmentReport.ps1 -HTMLReport .\YourOrganization-report.html
+```
 Which will generate the environment report on the local directory where you are running the script from
-NOTE: don’t forget to run the Exchange Management Shell as an Admin (elevated prompt) ok?
+NOTE: don’t forget to run the Exchange Management Shell as an Admin (elevated prompt)
 
 # Exchange Health Report
 
-https://raw.githubusercontent.com/cunninghamp/Test-ExchangeServerHealth.ps1/master/Test-ExchangeServerHealth.ps1
+[Exchange Health Report Script from Paul Cunningham on GitHun](https://raw.githubusercontent.com/cunninghamp/Test-ExchangeServerHealth.ps1/master/Test-ExchangeServerHealth.ps1)
+
 NOTE: Most practical way is to copy the content of the above page, paste it in a NOTEPAD window, and then save it as “Test-ExchangeServerHealth.ps1” file
 IMPORTANT: Modify this inside the script before running (starting line 186 in the script – or just search for the string “Modify these EmailSettings” in the script):
 
@@ -41,7 +44,8 @@ And then run the following:
 
 # Double-Check Exchange Certificate settings on your servers
 
-https://raw.githubusercontent.com/cunninghamp/Powershell-Exchange/master/Get-ExchangeCertificateReport/Get-ExchangeCertificateReport.ps1
+[Exchange Certificate Report Script from Paul Cunningham on Github](https://raw.githubusercontent.com/cunninghamp/Powershell-Exchange/master/Get-ExchangeCertificateReport/Get-ExchangeCertificateReport.ps1)
+
 NOTE: Most practical way is to copy the content of the above page, paste it in a NOTEPAD window, and then save it as “Get-ExchangeCertificateReport.ps1” file
 
 Just run the following:
