@@ -19,7 +19,7 @@ NOTE: don’t forget to run the Exchange Management Shell as an Admin (elevated 
 
 # Exchange Health Report
 
-[Exchange Health Report Script from Paul Cunningham on GitHun](https://raw.githubusercontent.com/cunninghamp/Test-ExchangeServerHealth.ps1/master/Test-ExchangeServerHealth.ps1)
+[Exchange Health Report Script from Paul Cunningham on GitHub](https://raw.githubusercontent.com/cunninghamp/Test-ExchangeServerHealth.ps1/master/Test-ExchangeServerHealth.ps1)
 
 NOTE: Most practical way is to copy the content of the above page, paste it in a NOTEPAD window, and then save it as “Test-ExchangeServerHealth.ps1” file
 IMPORTANT: Modify this inside the script before running (starting line 186 in the script – or just search for the string “Modify these EmailSettings” in the script):
