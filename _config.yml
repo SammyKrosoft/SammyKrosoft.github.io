@@ -19,7 +19,7 @@ email: SammyKrosoft@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the preparation of the replacement of my Technet Site http://aka.ms/sammy
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "blog.canadasam.ca" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_username: SammyKrosoft
 github_username:  SammyKrosoft
