@@ -8,7 +8,7 @@ permalink: /Exchange-Environment-Information-Collection-Scripts.html
 
 # Exchange environment report script
 
-[Exchange environmane report script](https://gallery.technet.microsoft.com/exchange/Generate-Exchange-2388e7c9)
+[Exchange environment report script](https://gallery.technet.microsoft.com/exchange/Generate-Exchange-2388e7c9)
 
 Run the following:
 ```powershell
