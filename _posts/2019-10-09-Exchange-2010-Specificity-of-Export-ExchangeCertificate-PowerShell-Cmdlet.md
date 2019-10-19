@@ -20,8 +20,8 @@ Just storing my lab's blurb below, I'll format it better later on...
 # for multiple commands instead of having to update the values for each command lines...
 
 $CertRequestPath = ".\request3.txt"
-$SubjectName = "c=CA, s=ONTARIO, l=OTTAWA, o=PCO, ou=PCO, cn=mail.pco-bcp.gc.ca"
-$DomainNames = "mail.pco-bcp.gc.ca", "autodiscover.pco-bcp.gc.ca"
+$SubjectName = "c=CA, s=ONTARIO, l=OTTAWA, o=CANADASAM, ou=EXOSpecialists, cn=mail.CanadaSam.ca"
+$DomainNames = "mail.CanadaSam.ca", "autodiscover.CanadaSam.ca"
 
 # As we don't have a -FileName or a -Parameter attribute
 Set-Content -path $CertRequestPath -Value (New-ExchangeCertificate -GenerateRequest -KeySize 2048 -SubjectName $SubjectName -DomainName $DomainNames -PrivateKeyExportable $True)
