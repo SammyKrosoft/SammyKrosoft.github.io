@@ -55,5 +55,6 @@ paginate: 10
 paginate_path: "/page:num/"
 
 # Disqus Comments
+disqus_shortname: sammicrosoft
 disqus:
     shortname: sammicrosoft
