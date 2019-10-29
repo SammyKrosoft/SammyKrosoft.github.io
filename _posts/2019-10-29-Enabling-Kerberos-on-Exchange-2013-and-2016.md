@@ -11,7 +11,7 @@ permalink: /Enabling-Kerberos-on-Exchange-2013-and-2016.html
 Here I just prepped a quick Excel spreadsheet that show the sequence of commands to use when you setup an Exchange Alternate Service Account on Exchange 2013 or 2016.
 
 You'll find the file on the following repository (right-click "Open on new Tab" if you want to keep the current page):
-[Enabling Kerberos on your Client Access Service servers/ Client Access Servers](https://github.com/SammyKrosoft/MSDoc-Set-Kerberos-Exchange2016)
+[Enabling Kerberos on your Client Access Service servers/ Client Access Servers](https://github.com/SammyKrosoft/MSDoc-Set-Kerberos-Exchange2016) 
 
 ## Introduction
 This is an Excel spreadsheet intended to help in setting Kerberos for Exchange CAS service.
