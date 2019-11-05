@@ -10,7 +10,7 @@ permalink: /Enabling-Kerberos-on-Exchange-2013-and-2016.html
 
 Here I just prepped a quick Excel spreadsheet that show the sequence of commands to use when you setup an Exchange Alternate Service Account on Exchange 2013 or 2016.
 
-[See the Downloads section for links to the Kerberos instructions Excel spreadsheet as well as the link to the Github repository containing the file](#DownloadSection)
+[See the Downloads section for links to the Kerberos instructions Excel spreadsheet as well as the link to the Github repository containing the file](#Download)
 
 
 
@@ -51,7 +51,6 @@ The official Microsoft Documentation is here:
 |13|setspn (Check)|Setspn -L CONTOSO\Exchange2016ASA$|
 |14|setspn (Check)|setspn -F -Q http/mail.contoso.ca|
 
-## DownloadSection ##
 ## Download
 
 [Download the Kerberos enablement instructions Excel file](https://github.com/SammyKrosoft/MSDoc-Set-Kerberos-Exchange2016/raw/master/Configure-ExchangeKerberos.xlsx)
