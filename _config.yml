@@ -54,8 +54,13 @@ relative_links:
 paginate: 10
 paginate_path: "/page:num/"
 
+# Google Analytics
+google_analytics: UA-150276373-1
+
 # Disqus Comments
 disqus_shortname: sammicrosoft
 disqus-shortname: sammicrosoft
 disqus:
     shortname: sammicrosoft
+
+  
