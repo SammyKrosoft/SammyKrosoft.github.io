@@ -6,6 +6,8 @@ categories: [PowerShell, Exchange On-Premises]
 permalink: /Get-WebServicesVirtualDirectory-Exported-With-All-Parameters.html
 ---
 
+# Exporting Exchange On-Premises EWS aka Exchange Web Services Configuration Properties
+
 ```powershell
 #Storing file path name in a variable to use it twice: one in the Export-CSV, one to open it after populating it
 $OutFile = "c:\temp\WebServicesProps.txt"
@@ -15,4 +17,4 @@ Get-WebServicesVirtualDirectory -ADPropertiesOnly | Select CertificateAuthentica
 
 #Opening the file immediately after the export to either save it under another name or copy/paste the results directly
 Notepad $OutFile
-```powershell
+```
