@@ -1,6 +1,7 @@
 ---
 layout: post
 author: sammykrosoft
+title: Exporting Exchange On-Premises EWS properties
 comments: true
 categories: [PowerShell, Exchange On-Premises]
 permalink: /Get-WebServicesVirtualDirectory-Exported-With-All-Parameters.html
