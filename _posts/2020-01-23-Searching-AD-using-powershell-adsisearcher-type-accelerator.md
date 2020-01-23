@@ -1,8 +1,9 @@
 ---
 layout: post
 author: sammykrosoft
+title: Example searching AD using [ADSISEARCHER] PowerShell type accelerator
 comments: true
-categories: [PowerShell, Exchange On-Premises]
+categories: [PowerShell, Active Directory]
 permalink: /searching-AD-using-powershell-adsisearcher-type-accelerator.html
 ---
 
