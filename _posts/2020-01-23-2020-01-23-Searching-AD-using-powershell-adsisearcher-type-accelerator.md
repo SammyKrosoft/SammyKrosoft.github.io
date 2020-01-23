@@ -1,7 +1,6 @@
 ---
 layout: post
 author: sammykrosoft
-title: Exporting Exchange On-Premises EWS properties
 comments: true
 categories: [PowerShell, Exchange On-Premises]
 permalink: /searching-AD-using-powershell-adsisearcher-type-accelerator.html
