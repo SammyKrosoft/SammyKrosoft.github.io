@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to check AD Schema, Forest and Domain versions
+title: How to check AD Schema, Forest and Domain versions with PowerShell using [ADSI] type accelerator
 date: 2020-01-23 13:13
 tags: [Exchange,AD,PowerShell,Active Directory]
 ---
