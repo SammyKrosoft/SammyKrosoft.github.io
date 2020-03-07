@@ -7,19 +7,23 @@ categories: [PowerShell, Active Directory, Exchange]
 permalink: /searching-Exchange-servers-using-ADSI-ADSISearcher-type-accelerators.html
 ---
 
-# Finding Exchange servers in AD using [ADSI] and [ADSISearcher] type accelerators
+# Finding Exchange servers and their properties in AD using [ADSI] and [ADSISearcher] type accelerators
 
 ## Overall Principle
 
 The principle is the following:
 
-. Using a variable to connect to the AD forest's Configuration partition
-.. then show the Configuration partition we're connected to
-. Using another variable, create the "ADSISearcher" base object ($ADConnection = [ADSISearcher]"") which root will be the AD forest's Configuration partition, loaded on the first variable mentionned above ($ADConnection.SearchRoot = "LDAP://$RootADConfigPartition")
-. Then use your filter, aka what do you want to search ... can be computers with certain names, or computers of certain type, like Exchange server in this example (objectCategory=CN=MS-Exch-Exchange-Server,CN=Schema,$RootADConfigPartition)
+- Using a variable to connect to the AD forest's Configuration partition ```$RootADConfigPartition = ([ADSI]'LDAP://RootDSE').ConfigurationNamingContext```
+- Using another variable, create the **ADSISearcher** base object ```$ADConnection = [ADSISearcher]""``` which root is by default the current domain, will be the AD forest's Configuration partition, loaded on the first variable mentionned above ```$ADConnection.SearchRoot = "LDAP://$RootADConfigPartition"```
+- Then use your filter, aka what do you want to search ... can be computers with certain names, or computers of certain type, like Exchange server in this example ```objectCategory=CN=MS-Exch-Exchange-Server,CN=Schema,$RootADConfigPartition```
 
+## Repository Link
+
+[Scripts to search for Exchange servers](https://github.com/SammyKrosoft/Search-AD-Using-Plain-PowerShell)
 
 ## Script 
+Pasting the script from the above mentionned repository for quick reading convenience:
+
 ```powershell
 $RootADConfigPartition = ([ADSI]'LDAP://RootDSE').configurationNamingContext
 
@@ -44,10 +48,6 @@ $Coll = @()
 Foreach ($item in $allresults) {
     $coll+=[pscustomobject]@{
         Name = $Item.Properties['name']
-        #ObjectCategory = $item.Properties['objectcategory']
-        #ObjectClass = $item.Properties['objectClass']
-        #Version1 = $item.Properties['msExchVersion']
-        #VErsion2 = $item.Properties['msExchMinAdminVersion']
         Version = $Item.Properties['serialNumber']
         Site = @("$($Item.Properties['msExchServerSite'] -Replace '^CN=|,.*$')")
         RolesNb = $Item.Properties['msExchCurrentServerRoles']
