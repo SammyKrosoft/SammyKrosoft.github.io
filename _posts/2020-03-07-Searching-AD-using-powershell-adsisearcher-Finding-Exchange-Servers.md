@@ -19,7 +19,7 @@ The principle is the following:
 
 ## Repository Link
 
-[Scripts to search for Exchange servers](https://github.com/SammyKrosoft/Search-AD-Using-Plain-PowerShell)
+[Scripts to search for Exchange servers](https://github.com/SammyKrosoft/Search-AD-Using-Plain-PowerShell){:target="_blank"}
 
 ## Script 
 Pasting the script from the above mentionned repository for quick reading convenience:
