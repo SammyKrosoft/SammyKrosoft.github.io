@@ -15,7 +15,7 @@ The principle is the following:
 
 - Using a variable to connect to the AD forest's Configuration partition ```$RootADConfigPartition = ([ADSI]'LDAP://RootDSE').ConfigurationNamingContext```
 - Using another variable, create the **ADSISearcher** base object ```$ADConnection = [ADSISearcher]""``` which root is by default the current domain, will be the AD forest's Configuration partition, loaded on the first variable mentionned above ```$ADConnection.SearchRoot = "LDAP://$RootADConfigPartition"```
-- Then use your filter, aka what do you want to search ... can be computers with certain names, or computers of certain type, like Exchange server in this example ```objectCategory=CN=MS-Exch-Exchange-Server,CN=Schema,$RootADConfigPartition```
+- Then use your filter, aka what do you want to search ... can be computers with certain names, or computers of certain type, like Exchange server in this example ```objectClass=MSExchExchangeServer```
 
 ## Repository Link
 
@@ -36,8 +36,8 @@ Write-Host "LDAP://$RootADConfigPartition"
 $ADConnection = [ADSISearcher]""
 $ADConnection.SearchRoot = "LDAP://$RootADConfigPartition"
 
-$ADConnection.Filter = "(objectCategory=CN=MS-Exch-Exchange-Server,CN=Schema,$RootADConfigPartition)"
-
+$ADConnection.Filter = "(objectClass=MSExchExchangeServer)"
+#NOTE: We also could use a filter on the objectcategory attribute, but that requires a Distinguished Name: "(objectCategory=CN=MS-Exch-Exchange-Server,CN=Schema,$RootADConfigPartition)"
 write-host "Search root:" -BackgroundColor Yellow
 $ADConnection | select -ExpandProperty SearchRoot
 
