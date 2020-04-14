@@ -1,10 +1,10 @@
 ---
 layout: post
 author: sammykrosoft
-title: List Exchange servers without Exchange Tools, just using [ADSI] and [ADSISEARCHER] PowerShell type accelerators
+title: Create an Archive for mailboxes on Exchange Server
 comments: true
-categories: [PowerShell, Active Directory, Exchange]
-permalink: /searching-Exchange-servers-using-ADSI-ADSISearcher-type-accelerators.html
+categories: [PowerShell, Exchange]
+permalink: /creating-or-activating-exchange-archive-mailboxes.html
 ---
 
 <span style="background-color: white; color: #171717; font-family: &quot;segoe ui&quot; , &quot;segoeui&quot; , &quot;segoe wp&quot; , &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;tahoma&quot; , &quot;arial&quot; , sans-serif; font-size: 16px;">
