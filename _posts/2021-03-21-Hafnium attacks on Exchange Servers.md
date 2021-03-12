@@ -27,13 +27,13 @@ We are committed to working with you through this issue.  Your Microsoft account
 
 > [ExHelper - update procedure for all Exchange versions and patch level](https://aka.ms/ExHelper)
  
-# Patches Download Links
+# Patches *Download* Links
 
 The Exchange Team's below article contain all the links to the Exchange patches for all versions
 
 > [Exchange Team Blog Post - Released: March 2021 Exchange Server Security Updates and patch download links for Exchange 2010, 2013, 2016, 2019 patches](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-march-2021-exchange-server-security-updates/ba-p/2175901)
 
-# Have you been compromised ?
+# *Have you been compromised ?*
 
 A script has been released by the Microsoft Support Team ([`Test-ProxyLogon.ps1`](https://github.com/microsoft/CSS-Exchange/releases/latest/download/Test-ProxyLogon.ps1)) that checks if the 4 below breaches have been exploited (CVE-2021-27065, CVE-2021-26857, CVE-2021-26858, CVE-2021-26855)
 
@@ -41,7 +41,7 @@ A script has been released by the Microsoft Support Team ([`Test-ProxyLogon.ps1`
 > 
 > [Other security related scripts are available on the CSS-Exchange Github page](https://github.com/microsoft/CSS-Exchange/tree/main/Security)
  
-# Does the Test-ProxyLogon.ps1 show suspicious files ? Run MSERT to be sure !
+# Does the Test-ProxyLogon.ps1 show suspicious files ? Run *MSERT* to be sure !
 
 - In addition to the `Test-ProxyLogon.ps1` script, you can scan the well-known folders using the *Microsoft Support Emergency Response Tool* aka *MSERT*. The folders `Test-ProxyLogon.ps1` checks are `%ProgramData%` (or `$env:ProgramData` in PowerShell language) for `.7z`, `.zip` and `.rar` archives, and `c:\root` and `%WINDIR%\temp` (or `$env:Windir\temp` in PowerShell language) - you can use the below MSERT only on these folders to buy some time.
 
