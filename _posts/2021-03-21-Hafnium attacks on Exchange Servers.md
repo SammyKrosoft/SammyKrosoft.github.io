@@ -53,7 +53,7 @@ A script has been released by the Microsoft Support Team ([`Test-ProxyLogon.ps1`
 
 - This is a presentation summarizing how the exploit work, and what to do
 
-> https://aka.ms/ExOOB-CA
+> [https://aka.ms/ExOOB-CA](https://aka.ms/ExOOB-CA)
 
 # Rhoderick Milne's Microsoft Canada's Exchange guru collected links
 
