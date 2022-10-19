@@ -95,7 +95,7 @@ The below script goes a little further than just loading the Exchange Management
 <span>    </span><span style="color: lightcyan">$msg = "`n`nThe script took $([math]::round($($StopWatch.Elapsed.TotalSeconds),2)) seconds to execute..."<br>
 <span>    </span><span style="color: lightcyan">Write-Host $msg <br>
 <span>    </span><span style="color: lightcyan">$msg = $null <br>
-<span>    </span><span style="color: lightcyan">$StopWatch = $null</span></p>
+<span>    </span><span style="color: lightcyan">$StopWatch = $null</span>
 <p class="MsoNormal" style="margin-bottom: .0001pt;line-height: normal;background: #012456"><span style="font-size: 9.0pt;font-family: 'Lucida Console';color: whitesmoke">}</span></p>
 <p class="MsoNormal" style="margin-bottom: .0001pt;line-height: normal;background: #012456"><span style="font-size: 9.0pt;font-family: 'Lucida Console';color: whitesmoke"><span> </span></span></p>
 <p class="MsoNormal"><span lang="FR-CA"> </span></p>
